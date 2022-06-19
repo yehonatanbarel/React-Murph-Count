@@ -5,7 +5,7 @@ function RunCheckBox() {
         <table>
             <tr>
                 <td class="checkRun">
-                    <label for='run'>
+                    <label>
                         <span>1.6 kilometers</span>
                         <input type="checkbox" id='runText' />
                     </label>
