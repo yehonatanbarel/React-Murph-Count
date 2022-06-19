@@ -6,4 +6,4 @@ in order to run this project follow this steps:
 
 this will open up a localhost [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-![murphForGit](https://user-images.githubusercontent.com/79272744/174485256-a75b70f8-1bb5-40be-ab39-d8ddd55a2fd5.gif)
+
