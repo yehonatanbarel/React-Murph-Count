@@ -1,10 +1,10 @@
-in order to run this project follow this steps:
-1. Clone the project by runnig the follow commend in the cmd: `git clone https://github.com/yehonatanbarel/Murph-Count-In-React.git`
-2. Enter to the folder of Murph-Count-In-React by the commend: `cd Murph-Count-In-React`
-3. Run in cmd the commend: `npm install`
-4. Run in cmd the commend: `npm start`
+### In order to run the project you must run the following commands in CMD:
+1. Clone the project: `git clone https://github.com/yehonatanbarel/TO-DO.git`
+2. Enter to the folder of TO-DO: `cd Murph-Count-In-React`
+3. Run in cmd: `npm install`
+4. Run in cmd: `npm start`
 
-this will open up a localhost [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This will open up a localhost [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
 ![murphToGit](https://user-images.githubusercontent.com/79272744/174485851-f809ed1d-f992-4c06-8020-ec4a664eef28.gif)
