@@ -2,6 +2,7 @@ import React from "react";
 import './components/style.css'
 import WorkOut from './components/WorkOut'
 import RunCheckBox from './components/RunCheckBox'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
 

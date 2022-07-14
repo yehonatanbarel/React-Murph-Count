@@ -1,4 +1,6 @@
 import './style.css'
+import Button from 'react-bootstrap/Button';
+
 
 function WorkOut(props) {
     return (
@@ -10,8 +12,8 @@ function WorkOut(props) {
                 <h1 className='h1--count'>{props.countFromState}</h1>
             </div>
             <div className="div--contaier--button">
-                <button onClick={props.handleSubtract} type="text" className="btn">subtract</button>
-                <button onClick={props.handleAdd} type="text" className="btn">add</button>
+                <Button variant="secondary" onClick={props.handleSubtract} type="text" className="btn">subtract</Button>
+                <Button variant="success" onClick={props.handleAdd} type="text" className="btn">add</Button>
             </div>
         </div>
     )
