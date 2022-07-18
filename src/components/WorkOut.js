@@ -15,6 +15,7 @@ function WorkOut(props) {
                 <Button variant="secondary" onClick={props.handleSubtract} type="text" className="btn">subtract</Button>
                 <Button variant="success" onClick={props.handleAdd} type="text" className="btn">add</Button>
             </div>
+            
         </div>
     )
 

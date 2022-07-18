@@ -51,15 +51,20 @@
 .checkRun {
     width: 40px;
     height: 50px;
-    display: block;
+    /* display: block; */
+    display: flexbox;
     margin: 50px;
     text-align: center;
     font: 30px Arial, sans-serif;
+
+    /* border: 1px solid black; */
+
 }
 
 #runText {
     width: 40px;
     height: 50px;
+
 
 
 }

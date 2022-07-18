@@ -3,9 +3,9 @@ import './style.css'
 function RunCheckBox() {
     return (
         <table>
-            <tr>
+            <tr >
                 <td class="checkRun">
-                    <label>
+                    <label >
                         <span>1.6 kilometers</span>
                         <input type="checkbox" id='runText' />
                     </label>
