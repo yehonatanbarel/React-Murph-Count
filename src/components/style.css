@@ -73,6 +73,29 @@
     text-align: center;
 }
 
+.timer {
+    border: 1px solid #000;
+    text-align: center;
+    font: 50px Arial, sans-serif;
+    margin: 20px;
+}
+
+.btn--timer {
+    border: 1px solid #000;
+    text-align: center;
+    margin: 15px;
+    font: 24px Arial, sans-serif;
+    border: 1px solid #000;
+
+}
+
+.main--div--for--stop--watch{
+    text-align: center;
+    border: 1px solid #000;
+
+
+}
+
 
 
 

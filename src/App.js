@@ -2,6 +2,9 @@ import React from "react";
 import './components/style.css'
 import WorkOut from './components/WorkOut'
 import RunCheckBox from './components/RunCheckBox'
+import Timer from './components/Timer'
+import BtnForTimer from './components/BtnForTimer'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
@@ -44,6 +47,13 @@ function App() {
     console.log("sub pull up")
   }
 
+
+  // ******************* IN HERE I WORK ON THE STOPWATCH *******************
+
+  const [time, setTime] = React.useState({ ms: 0, s: 0, m: 0, h: 0 });
+
+
+
   // ========================= RENDER ALL =========================
 
 
@@ -79,6 +89,17 @@ function App() {
 
         <RunCheckBox />
 
+        {/* // ========= WORK IN PROGRESS ======== */}
+
+      </div>
+
+      {/* // ========= I PUT THAT (Timer & BtnForTimer) IN HERE (OUTSIDE OF THE DIV ABOVE) SO ======== */}
+      {/* // ========= IT WILL NOT GET THE AFFECT OF ALL THE STYLE OF THE DIV ABOVE ======== */}
+      {/* // ========= AND WILL HAVE IT'S OWN DIV CSS STYLE ======== */}
+
+      <div className="main--div--for--stop--watch">
+        <Timer time={time} />
+        <BtnForTimer />
       </div>
 
     </>
