@@ -50,7 +50,11 @@ function App() {
 
   // ******************* IN HERE I WORK ON THE STOPWATCH *******************
 
-  const [time, setTime] = React.useState({ s: 0, m: 0, h: 0 });
+
+
+
+
+
 
 
 
@@ -102,7 +106,7 @@ function App() {
       {/* // ========= AND WILL HAVE IT'S OWN DIV CSS STYLE ======== */}
 
       <div className="main--div--for--stop--watch">
-        <Timer time={time} />
+        <Timer />
         <BtnForTimer />
       </div>
 

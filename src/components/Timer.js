@@ -5,6 +5,10 @@ function Timer(props) {
 
 
 
+    const [time, setTime] = React.useState({ s: 0, m: 0, h: 0 });
+
+
+
 
     // &nbsp; it's just a way that allows us to create multiple spaces in a row.
     // This short if will check if thetime is above 2 digit and make sure it look 
@@ -16,9 +20,9 @@ function Timer(props) {
     // The className="timer" is for style.css
     return (
         <div className="timer">
-            <span>{(props.time.m >= 10) ? props.time.h : "0" + props.time.h}</span>&nbsp;:&nbsp;
-            <span>{(props.time.m >= 10) ? props.time.m : "0" + props.time.m}</span>&nbsp;:&nbsp;
-            <span>{(props.time.s >= 10) ? props.time.s : "0" + props.time.s}</span>{/*&nbsp;:&nbsp;*/}
+            <span>{(time.h >= 10) ? time.h : "0" + time.h}</span>&nbsp;:&nbsp;
+            <span>{(time.m >= 10) ? time.m : "0" + time.m}</span>&nbsp;:&nbsp;
+            <span>{(time.s >= 10) ? time.s : "0" + time.s}</span>{/*&nbsp;:&nbsp;*/}
             {/* <span>{(props.time.ms >= 10) ? props.time.ms : "0" + props.time.ms}</span> */}
         </div>
     );
