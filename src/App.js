@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './components/style.css'
 import WorkOut from './components/WorkOut'
 import RunCheckBox from './components/RunCheckBox'
@@ -52,9 +52,8 @@ function App() {
 
   const [time, setTime] = React.useState({ s: 0, m: 0, h: 0 });
 
-  React.useEffect(() => {
 
-  })
+
 
 
 
