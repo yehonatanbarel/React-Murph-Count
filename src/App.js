@@ -50,7 +50,12 @@ function App() {
 
   // ******************* IN HERE I WORK ON THE STOPWATCH *******************
 
-  const [time, setTime] = React.useState({ ms: 0, s: 0, m: 0, h: 0 });
+  const [time, setTime] = React.useState({ s: 0, m: 0, h: 0 });
+
+  React.useEffect(() => {
+
+  })
+
 
 
 
