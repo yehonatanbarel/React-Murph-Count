@@ -1,0 +1,59 @@
+.main--div--for--stop--watch {
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.timer--digit {
+    /* border: 1px solid #000; */
+    text-align: center;
+    font: 50px Arial, sans-serif;
+    margin: 20px;
+}
+
+
+.btn--timer {
+    border-radius: 50px;
+    background-color: white;
+    margin: 15px;
+    padding: auto;
+    height: 50px;
+    width: 100px;
+    font: 24px Arial, sans-serif;
+
+}
+
+.btn--start {
+    color: green;
+    border-color: green;
+}
+
+.btn--start:hover {
+    color: white;
+    border-color: rgb(32, 187, 32);
+    background-color: rgb(32, 187, 32);
+
+}
+
+.btn--pause--resume {
+    color: rgb(168, 49, 181);
+    border-color: rgb(168, 49, 181);
+}
+
+.btn--pause--resume:hover {
+    color: white;
+    border-color: rgb(168, 49, 181);
+    background-color: rgb(168, 49, 181);
+
+}
+
+.btn--reset {
+    color: rgb(191, 57, 57);
+    border-color: rgb(191, 57, 57);
+}
+
+.btn--reset:hover {
+    color: white;
+    border-color: rgb(191, 57, 57);
+    background-color: rgb(191, 57, 57);
+
+}

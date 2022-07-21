@@ -1,5 +1,7 @@
 import React from "react";
-import './style.css'
+import './Timer.css'
+import Button from 'react-bootstrap/Button';
+
 
 function Timer(props) {
 
@@ -10,6 +12,11 @@ function Timer(props) {
     const [hour, setHour] = React.useState(0);
     const [isActive, setIsActive] = React.useState(false);
     const [status, setStatus] = React.useState(0);
+
+    // status explanation btn onth screen:
+    // 0 - Start 
+    // 1 - Pause & Reset 
+    // 2 - Resume & Reset
 
     function handleStartBtn() {
         setIsActive(true);
@@ -27,10 +34,10 @@ function Timer(props) {
 
     }
 
-
-
     function handleReset() {
         setSecond(0);
+        setMinute(0);
+        setHour(0);
         setIsActive(false);
         setStatus(0);
 
@@ -41,6 +48,14 @@ function Timer(props) {
         if (isActive) {
             interval = setInterval(() => {
                 setSecond(prev => prev + 1);
+                if (second > 58) {
+                    setSecond(0);
+                    setMinute(prev => prev + 1);
+                }
+                if (minute === 59 && second === 59) {
+                    setMinute(0);
+                    setHour(prev => prev + 1);
+                }
             }, 1000);
         } else if (!isActive && second !== 0) {
             clearInterval(interval);
@@ -59,7 +74,7 @@ function Timer(props) {
     // The className="timer" is for style.css
     return (
         <>
-            <div className="timer">
+            <div className="timer--digit">
                 <span>{(hour >= 10) ? hour : "0" + hour}</span>&nbsp;:&nbsp;
                 <span>{(minute >= 10) ? minute : "0" + minute}</span>&nbsp;:&nbsp;
                 <span>{(second >= 10) ? second : "0" + second}</span>{/*&nbsp;:&nbsp;*/}
@@ -70,22 +85,24 @@ function Timer(props) {
             {
                 (status === 0) ?
                     <div >
-                        <button className="btn--timer" onClick={handleStartBtn}>Start</button>
+                        <button className="btn--timer btn--start" onClick={handleStartBtn}>Start</button>
+                        {/* <Button variant="success" onClick={handleStartBtn} type="text" className="btn--timer">Start</Button> */}
+
                     </div> : ""
             }
             {
                 (status === 1) ?
                     < div >
-                        <button className="btn--timer" onClick={handlePauseBtn}>Pause</button>
-                        <button className="btn--timer" onClick={handleReset}>reset</button>
+                        <button className="btn--timer btn--pause--resume" onClick={handlePauseBtn}>Pause</button>
+                        <button className="btn--timer btn--reset" onClick={handleReset}>reset</button>
                     </div> : ""
             }
 
             {
                 (status === 2) ?
                     < div >
-                        <button className="btn--timer" onClick={handleResumeBtn}>Resume</button>
-                        <button className="btn--timer" onClick={handleReset}>reset</button>
+                        <button className="btn--timer btn--pause--resume" onClick={handleResumeBtn}>Resume</button>
+                        <button className="btn--timer btn--reset" onClick={handleReset}>reset</button>
                     </div> : ""
             }
 
