@@ -9,16 +9,31 @@ function Timer(props) {
     const [minute, setMinute] = React.useState(0);
     const [hour, setHour] = React.useState(0);
     const [isActive, setIsActive] = React.useState(false);
+    const [status, setStatus] = React.useState(0);
 
-    // this just switch the state of isActive so we can use start and stop
-    function handleStartStop() {
-        setIsActive(!isActive);
+    function handleStartBtn() {
+        setIsActive(true);
+        setStatus(1);
+    }
+
+    function handlePauseBtn() {
+        setIsActive(false);
+        setStatus(2);
+    }
+
+    function handleResumeBtn() {
+        setIsActive(true);
+        setStatus(1);
 
     }
+
+
 
     function handleReset() {
         setSecond(0);
         setIsActive(false);
+        setStatus(0);
+
     }
 
     React.useEffect(() => {
@@ -53,16 +68,28 @@ function Timer(props) {
 
 
             {
-                !isActive ?
+                (status === 0) ?
                     <div >
-                        <button className="btn--timer" onClick={handleStartStop}>Start</button>
-                    </div>
-                    :
-                    <div >
-                        <button className="btn--timer" onClick={handleStartStop}>Pause</button>
-                        <button className="btn--timer" onClick={handleReset}>reset</button>
-                    </div>
+                        <button className="btn--timer" onClick={handleStartBtn}>Start</button>
+                    </div> : ""
             }
+            {
+                (status === 1) ?
+                    < div >
+                        <button className="btn--timer" onClick={handlePauseBtn}>Pause</button>
+                        <button className="btn--timer" onClick={handleReset}>reset</button>
+                    </div> : ""
+            }
+
+            {
+                (status === 2) ?
+                    < div >
+                        <button className="btn--timer" onClick={handleResumeBtn}>Resume</button>
+                        <button className="btn--timer" onClick={handleReset}>reset</button>
+                    </div> : ""
+            }
+
+
 
 
 
