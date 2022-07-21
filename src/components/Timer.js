@@ -61,7 +61,9 @@ function Timer(props) {
             clearInterval(interval);
         }
         return () => clearInterval(interval);
-    }, [isActive, second]);
+    }, [isActive, second]);  // NEED TO CHEKC IF I NEED TO PUT IN HERE ALSO MINUTE, HOUR VAR 
+
+
 
 
     // &nbsp; it's just a way that allows us to create multiple spaces in a row.
