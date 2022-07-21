@@ -87,7 +87,7 @@ function Timer(props) {
             {
                 (status === 0) ?
                     <div >
-                        <button className="btn--timer btn--start" onClick={handleStartBtn}>Start</button>
+                        <button className="btn--timer btn--start" onClick={handleStartBtn}>Start Workout</button>
                         {/* <Button variant="success" onClick={handleStartBtn} type="text" className="btn--timer">Start</Button> */}
 
                     </div> : ""
@@ -96,7 +96,7 @@ function Timer(props) {
                 (status === 1) ?
                     < div >
                         <button className="btn--timer btn--pause--resume" onClick={handlePauseBtn}>Pause</button>
-                        <button className="btn--timer btn--reset" onClick={handleReset}>reset</button>
+                        <button className="btn--timer btn--reset" onClick={handleReset}>Reset</button>
                     </div> : ""
             }
 
@@ -104,7 +104,7 @@ function Timer(props) {
                 (status === 2) ?
                     < div >
                         <button className="btn--timer btn--pause--resume" onClick={handleResumeBtn}>Resume</button>
-                        <button className="btn--timer btn--reset" onClick={handleReset}>reset</button>
+                        <button className="btn--timer btn--reset" onClick={handleReset}>Reset</button>
                     </div> : ""
             }
 
