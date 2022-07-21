@@ -5,9 +5,33 @@ function Timer(props) {
 
 
 
-    const [time, setTime] = React.useState({ s: 0, m: 0, h: 0 });
+    const [second, setSecond] = React.useState(0);
+    const [minute, setMinute] = React.useState(0);
+    const [hour, setHour] = React.useState(0);
+    const [isActive, setIsActive] = React.useState(false);
 
+    // this just switch the state of isActive so we can use start and stop
+    function handleStartStop() {
+        setIsActive(!isActive);
 
+    }
+
+    function handleReset() {
+        setSecond(0);
+        setIsActive(false);
+    }
+
+    React.useEffect(() => {
+        let interval = null;
+        if (isActive) {
+            interval = setInterval(() => {
+                setSecond(prev => prev + 1);
+            }, 1000);
+        } else if (!isActive && second !== 0) {
+            clearInterval(interval);
+        }
+        return () => clearInterval(interval);
+    }, [isActive, second]);
 
 
     // &nbsp; it's just a way that allows us to create multiple spaces in a row.
@@ -19,12 +43,30 @@ function Timer(props) {
     // this will make sure to always show the time with 2 digit for each.
     // The className="timer" is for style.css
     return (
-        <div className="timer">
-            <span>{(time.h >= 10) ? time.h : "0" + time.h}</span>&nbsp;:&nbsp;
-            <span>{(time.m >= 10) ? time.m : "0" + time.m}</span>&nbsp;:&nbsp;
-            <span>{(time.s >= 10) ? time.s : "0" + time.s}</span>{/*&nbsp;:&nbsp;*/}
-            {/* <span>{(props.time.ms >= 10) ? props.time.ms : "0" + props.time.ms}</span> */}
-        </div>
+        <>
+            <div className="timer">
+                <span>{(hour >= 10) ? hour : "0" + hour}</span>&nbsp;:&nbsp;
+                <span>{(minute >= 10) ? minute : "0" + minute}</span>&nbsp;:&nbsp;
+                <span>{(second >= 10) ? second : "0" + second}</span>{/*&nbsp;:&nbsp;*/}
+                {/* <span>{(props.time.ms >= 10) ? props.time.ms : "0" + props.time.ms}</span> */}
+            </div>
+
+
+            {
+                !isActive ?
+                    <div >
+                        <button className="btn--timer" onClick={handleStartStop}>Start</button>
+                    </div>
+                    :
+                    <div >
+                        <button className="btn--timer" onClick={handleStartStop}>Pause</button>
+                        <button className="btn--timer" onClick={handleReset}>reset</button>
+                    </div>
+            }
+
+
+
+        </>
     );
 }
 

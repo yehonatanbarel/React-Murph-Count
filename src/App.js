@@ -107,7 +107,6 @@ function App() {
 
       <div className="main--div--for--stop--watch">
         <Timer />
-        <BtnForTimer />
       </div>
 
     </>
