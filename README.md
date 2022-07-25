@@ -11,9 +11,6 @@ This will open up a localhost [http://localhost:3000](http://localhost:3000) to 
 
 
 
-<img width="894" alt="‏‏murph pic for git" src="https://user-images.githubusercontent.com/79272744/179478116-335a9d39-132b-4e1d-94fb-60a2759dfce9.PNG">
-
-
 <img width="950" alt="SMALL-SCREEN" src="https://user-images.githubusercontent.com/79272744/180855462-f06ec330-5a8b-49b2-9d72-6d159f46f183.PNG">
 
 
