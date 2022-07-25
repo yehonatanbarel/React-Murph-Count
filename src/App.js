@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import './components/style.css'
 import WorkOut from './components/WorkOut'
 import RunCheckBox from './components/RunCheckBox'
 import Timer from './components/Timer'
-import BtnForTimer from './components/BtnForTimer'
+
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -46,19 +46,6 @@ function App() {
     setCountPullUp(prev => prev - 1);
     console.log("sub pull up")
   }
-
-
-  // ******************* IN HERE I WORK ON THE STOPWATCH *******************
-
-
-
-
-
-
-
-
-
-
 
 
 
